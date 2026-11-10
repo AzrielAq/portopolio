@@ -1,0 +1,39 @@
+// Tema terang/gelap
+const root = document.documentElement;
+const tombol = document.getElementById('tema');
+let saved = null;
+try { saved = localStorage.getItem('tema'); } catch (e) {}
+const gelap = saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+root.dataset.theme = gelap ? 'dark' : 'light';
+tombol.addEventListener('click', () => {
+  const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+  root.dataset.theme = next;
+  try { localStorage.setItem('tema', next); } catch (e) {}
+});
+
+// Nama di hero: huruf menebal saat kursor mendekat
+const huruf = [];
+document.querySelectorAll('.name .w').forEach(w => {
+  const teks = w.textContent;
+  w.textContent = '';
+  w.setAttribute('aria-hidden', 'true');
+  [...teks].forEach(ch => {
+    const s = document.createElement('span');
+    s.className = 'l';
+    s.textContent = ch;
+    w.appendChild(s);
+    huruf.push(s);
+  });
+});
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const atur = (x, y) => huruf.forEach(s => {
+    const r = s.getBoundingClientRect();
+    const d = Math.hypot(x - (r.left + r.width / 2), y - (r.top + r.height / 2));
+    const t = Math.max(0, 1 - d / 280);
+    s.style.fontVariationSettings = `"wght" ${Math.round(500 + t * 300)}`;
+  });
+  addEventListener('pointermove', e => atur(e.clientX, e.clientY));
+  addEventListener('pointerleave', () => huruf.forEach(s => s.style.fontVariationSettings = ''));
+}
+
+document.getElementById('tahun').textContent = new Date().getFullYear();
