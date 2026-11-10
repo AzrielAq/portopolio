@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Azriel Aqilla – Portofolio</title>
+<meta name="description" content="Portofolio Azriel Aqilla: proyek, keahlian, dan kontak.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#atas">Azriel Aqilla</a>
+  <nav>
+    <a href="#tentang">Tentang</a>
+    <a href="#proyek">Proyek</a>
+    <a href="#keahlian">Keahlian</a>
+    <a href="#kontak">Kontak</a>
+    <button id="tema" type="button" aria-label="Ganti tema terang/gelap"></button>
+  </nav>
+</header>
+
+<main id="atas">
+  <section class="hero">
+    <h1 class="name" aria-label="Azriel Aqilla">
+      <span class="w">Azriel</span>
+      <span class="w">Aqilla</span>
+    </h1>
+    <div class="hero-bottom">
+      <p>Mahasiswa yang suka mengubah ide menjadi sesuatu yang bisa dipakai, dari website sampai analisis data.</p>
+      <div class="actions">
+        <a class="btn primary" href="#proyek">Lihat proyek</a>
+        <a class="btn" href="#kontak">Hubungi saya</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="tentang" class="block">
+    <h2>Tentang saya</h2>
+    <div class="cols">
+      <p>Halo, saya Azriel Aqilla. Saya senang belajar hal baru dan menyelesaikannya sampai tuntas. Website ini saya buat sendiri dengan HTML, CSS, dan JavaScript sebagai tempat mengumpulkan karya saya.</p>
+      <dl>
+        <dt>Status</dt><dd>Mahasiswa</dd>
+        <dt>Minat</dt><dd>Web, data, dan desain</dd>
+        <dt>Sedang dipelajari</dt><dd>Pengembangan web dan analisis data</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="proyek" class="block">
+    <h2>Proyek</h2>
+    <div class="list">
+      <details open>
+        <summary><span class="t">Website portofolio pribadi</span><span class="m">2026 · HTML, CSS, JavaScript</span></summary>
+        <p>Website yang sedang Anda lihat. Ringan, responsif, dan punya mode terang dan gelap. <a href="https://github.com/USERNAME/REPO">Lihat kode</a></p>
+      </details>
+      <details>
+        <summary><span class="t">Analisis sentimen aplikasi mobile banking</span><span class="m">2026 · Data mining</span></summary>
+        <p>Tugas kuliah: mengumpulkan dan melabeli komentar pengguna menjadi sentimen positif dan negatif. Ganti teks ini dengan hasil akhir proyek Anda.</p>
+      </details>
+      <details>
+        <summary><span class="t">Nama proyek berikutnya</span><span class="m">Tahun · Teknologi</span></summary>
+        <p>Jelaskan masalah yang diselesaikan, peran Anda, dan hasilnya dalam dua atau tiga kalimat.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="keahlian" class="block">
+    <h2>Keahlian</h2>
+    <ul class="skills">
+      <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git &amp; GitHub</li>
+      <li>Analisis data</li><li>Microsoft Office</li><li>Kerja tim</li><li>Presentasi</li>
+    </ul>
+  </section>
+
+  <section id="kontak" class="block contact">
+    <h2>Mari ngobrol</h2>
+    <a class="mail" href="mailto:emailanda@gmail.com">emailanda@gmail.com</a>
+    <p class="links">
+      <a href="https://github.com/USERNAME">GitHub</a>
+      <a href="https://linkedin.com/in/USERNAME">LinkedIn</a>
+      <a href="https://instagram.com/USERNAME">Instagram</a>
+    </p>
+  </section>
+</main>
+
+<footer><p>© <span id="tahun"></span> Azriel Aqilla</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
